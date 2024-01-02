@@ -1,5 +1,5 @@
 ## Summary
-This repository contains everything you need to build the arduino controlled electronex of my [3d printable Portal Gun](https://www.thingiverse.com/thing:6191828).
+This repository contains everything you need to build the arduino controlled electronics of my [3d printable Portal Gun](https://www.thingiverse.com/thing:6191828).
 
 In the `main` branch here you will find my own circuit which features a USB-C rechargable LiPo battery and simply two buttons to switch between orange and blue lights. 
 
