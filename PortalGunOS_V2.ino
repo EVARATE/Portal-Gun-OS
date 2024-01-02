@@ -18,7 +18,7 @@ CRGB leds[LED_COUNT];         // Array representing all WS2812B LEDs
 
 // Settings for flickering LEDs (via brownian noise). Values in range [0, 255]:
 #define ENABLE_FLICKERING 1
-#define BROWNIAN_STEP 2       // How sudden the brightness can change
+#define BROWNIAN_STEP 3       // How sudden the brightness can change
 #define MIN_BRIGHTNESS 100
 #define MAX_BRIGHTNESS 230
 #define BRW_MAX_OOR 100       // For how many loops the brownian can be out of range before being pushed back
