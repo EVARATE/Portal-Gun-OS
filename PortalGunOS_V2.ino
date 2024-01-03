@@ -1,5 +1,15 @@
 #include <FastLED.h>
 
+/* The following code is ready for upload without any changes necessary.
+   You can however tweak various things via the '#define' values below and
+   the two 'const int color1[3] = {...}' values under 'Global variables'
+   if you like.
+
+   This way you can easily change the color and flickering behaviour of
+   the LEDs.
+  */
+
+
 // Pins:
 #define LED_BAT_LOW 10        // LED indicating low battery
 #define LOW_BAT 14            // LOW indicates low battery
@@ -13,15 +23,16 @@ CRGB leds[LED_COUNT];         // Array representing all WS2812B LEDs
 
 // Enable Serial debug communication:
 #define ENABLE_DEBUG_COMMS 0
-/* Set this to 0 for the final upload since serial communication
+/* Will send data about LED brightness and buttons being pushed
+   back to the Arduino IDE.
+   Set this to 0 for the final upload since serial communication
    affects the speed of your code and flickering                  */
 
 // Settings for flickering LEDs (via brownian noise). Values in range [0, 255]:
 #define ENABLE_FLICKERING 1
-#define BROWNIAN_STEP 3       // How sudden the brightness can change
-#define MIN_BRIGHTNESS 100
-#define MAX_BRIGHTNESS 230
-#define BRW_MAX_OOR 100       // For how many loops the brownian can be out of range before being pushed back
+#define BROWNIAN_STEP 4       // How sudden the brightness can change.
+#define MIN_BRIGHTNESS 100    // The flickering brightness will move
+#define MAX_BRIGHTNESS 230    // between these two values.
 #define BROWNIAN_START (MAX_BRIGHTNESS + MIN_BRIGHTNESS) / 2
 
 // Global variables:
@@ -29,11 +40,8 @@ const int color1[3] = {255, 80, 0};    // Orange (r,g,b)
 const int color2[3] = {0, 150, 255};   // Blue   (r,g,b)
 int currentColor[] = {color1[0], color1[1], color1[2]};
 
-int stuckCounter = 0;         // Count for how many loops the brightness is out of range
-bool stuckMIN = false;
-bool stuckMAX = false;
 float brownian = BROWNIAN_START;
-const float brwPushBackStep = 4.0 * min( (MAX_BRIGHTNESS - MIN_BRIGHTNESS) / (4*BROWNIAN_STEP), BROWNIAN_STEP ) / float(BRW_MAX_OOR);
+int brwLoopSkipCounter = 0;
 float brightness = 1.0;       // Don't change this if flickering is enabled
 
 void setup() {
@@ -79,48 +87,18 @@ void loop() {
     brightness = 1.0;
     #endif
   }
+
   #if ENABLE_FLICKERING
   else{
     // Randomly change LED brightness via brownian noise:
     brownian += float(random(-BROWNIAN_STEP + 1, BROWNIAN_STEP));
-    brownian = constrain(brownian, MIN_BRIGHTNESS, MAX_BRIGHTNESS);
-    
-    /* Count for how many loops and on which side the brownian is out of range: */
-    if(brownian <= MIN_BRIGHTNESS){
-      stuckCounter++;
-      stuckMAX = false;
-      stuckMIN = true;
-    }
-    else if( brownian >= MAX_BRIGHTNESS){
-      stuckCounter++;
-      stuckMAX = true;
-      stuckMIN = false;
-    }
-    else{
-      stuckCounter = 0;
-      stuckMAX = false;
-      stuckMIN = false;
-    }
-
-    /* Push brownian back into range: */
-    if(stuckCounter >= BRW_MAX_OOR && stuckMIN){
-      brownian += brwPushBackStep;
-      stuckCounter--;
-      if(stuckCounter <= 0) stuckMIN = false;
-    }
-    else if(stuckCounter >= BRW_MAX_OOR && stuckMAX){
-      brownian -= brwPushBackStep;
-      stuckCounter--;
-      if(stuckCounter <= 0) stuckMAX = false;
-    }
 
     /* Calculate resulting brightness: */
+    brownian = constrain(brownian, MIN_BRIGHTNESS, MAX_BRIGHTNESS);
     brightness = brownian / 255.0;
   }
   #if ENABLE_DEBUG_COMMS        /* Shows brightness and if brownian gets out of range: */
   Serial.print(brightness);
-  Serial.print(" ");
-  Serial.print(float(stuckCounter) / BRW_MAX_OOR);  // Goes up when brownian is out of range
   Serial.print(" ");
   #endif
   #endif
@@ -137,9 +115,7 @@ void loop() {
     analogWrite(LED_BAT_LOW, 0);
   }
 
-  // Serial Plotter Reference Line
-  #if ENABLE_DEBUG_COMMS        /* Shows a reference line: */
-  Serial.print(" ");
+  #if ENABLE_DEBUG_COMMS        /* Shows a reference line in the Serial Plotter: */
   Serial.println(1);
   #endif
 }
