@@ -41,7 +41,6 @@ const int color2[3] = {0, 150, 255};   // Blue   (r,g,b)
 int currentColor[] = {color1[0], color1[1], color1[2]};
 
 float brownian = BROWNIAN_START;
-int brwLoopSkipCounter = 0;
 float brightness = 1.0;       // Don't change this if flickering is enabled
 
 void setup() {
