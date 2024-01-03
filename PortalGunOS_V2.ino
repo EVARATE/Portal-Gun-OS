@@ -30,15 +30,15 @@ CRGB leds[LED_COUNT];         // Array representing all WS2812B LEDs
 
 // Settings for flickering LEDs (via brownian noise). Values in range [0, 255]:
 #define ENABLE_FLICKERING 1
-#define BROWNIAN_STEP 4       // How sudden the brightness can change.
-#define MIN_BRIGHTNESS 100    // The flickering brightness will move
+#define BROWNIAN_STEP 5       // How sudden the brightness can change.
+#define MIN_BRIGHTNESS 150    // The flickering brightness will move
 #define MAX_BRIGHTNESS 230    // between these two values.
 #define BROWNIAN_START (MAX_BRIGHTNESS + MIN_BRIGHTNESS) / 2
 
 // Global variables:
 const int color1[3] = {255, 80, 0};    // Orange (r,g,b)
 const int color2[3] = {0, 150, 255};   // Blue   (r,g,b)
-int currentColor[] = {color1[0], color1[1], color1[2]};
+int currentColor[] = {10, 1, 0};       // Initial color before any button is pressed (r,g,b)
 
 float brownian = BROWNIAN_START;
 float brightness = 1.0;       // Don't change this if flickering is enabled
