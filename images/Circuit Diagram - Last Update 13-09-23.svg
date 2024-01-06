@@ -6,30 +6,8 @@
    width="1620"
    height="480"
    id="svg586"
-   sodipodi:docname="Circuit Diagram - Last Update 31-12-23.svg"
-   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview358"
-     pagecolor="#ffffff"
-     bordercolor="#666666"
-     borderopacity="1.0"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     showgrid="false"
-     inkscape:zoom="5.5753086"
-     inkscape:cx="893.94154"
-     inkscape:cy="361.68401"
-     inkscape:window-width="2560"
-     inkscape:window-height="1377"
-     inkscape:window-x="1912"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="svg586" />
   <defs
      id="defs590" />
   <line
@@ -484,10 +462,10 @@
      id="line122" />
   <line
      x1="490"
-     y1="240"
+     y1="270"
      x2="760"
-     y2="240"
-     style="stroke:#f0dc00;stroke-linecap:square;stroke-width:2;stroke-opacity:1"
+     y2="270"
+     style="stroke:#f0dc00;stroke-width:2;stroke-linecap:square;stroke-opacity:1"
      id="line124" />
   <line
      x1="1450"
@@ -554,10 +532,10 @@
      id="line140" />
   <line
      x1="760"
-     y1="240"
+     y1="270"
      x2="760"
      y2="280"
-     style="stroke:#f0dc00;stroke-linecap:square;stroke-width:2;stroke-opacity:1"
+     style="stroke:#f0dc00;stroke-width:2;stroke-linecap:square;stroke-opacity:1"
      id="line142" />
   <line
      x1="760"
@@ -1700,13 +1678,13 @@
        x="582.40936"
        y="290.189">8.5cm</tspan></text>
   <text
-     x="718.87659"
-     y="232.86261"
+     x="702.89624"
+     y="262.54044"
      style="font-size:11px;font-family:Arial;text-anchor:end;fill:#f0dc00;fill-opacity:1"
      dominant-baseline="middle"
      id="text454-0-2"><tspan
-       x="718.87659"
-       y="232.86261"
+       x="702.89624"
+       y="262.54044"
        id="tspan36999">2cm</tspan></text>
   <text
      x="547.40472"
