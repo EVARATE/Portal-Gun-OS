@@ -52,9 +52,10 @@ Solder the remaining wires according to the schematic (**except for the LED_Ring
 
 
 ## See if it works
-Before connecting a powersupply check all connections with a multimeter just to be safe. Then plug in the LiPo battery and see if the board powers up. (**The PowerBoost 500 Charger requires the battery to be plugged in even if you connect the USB-C to power.**).
+Before connecting a powersupply check all connections with a multimeter just to be safe. Also check if the wires of your battery have the same polarity as the powerboost. Some manufacturers flip them!!! Cut the battery wires individually and solder the connector on in reverse if this is the case.
+Then plug in the LiPo battery and see if the board powers up. (**The PowerBoost 500 Charger requires the battery to be plugged in even if you connect the USB-C to power.**).
 
-With the toggle switch off there should only be the ``LOW`` LED of the PowerBoost burning. With the toggle switch on there should be the ``PWR`` LED of the PowerBoost and some red LEDs on the arduino burning.
+With the toggle switch off there should only be the ``LOW`` LED of the PowerBoost burning. With the toggle switch on there should be the ``PWR`` or ``Chrg`` LED of the PowerBoost and some red LEDs on the arduino burning.
 
 ### Uploading the code
 If you have never uploaded code to an arduino then the simplest way is probably the [Arduino Web Editor](https://create.arduino.cc/editor). Go to the link, create an account and follow the instructions. There is also a downloadable IDE and tons of guides and tutorials on youtube to get you started.
