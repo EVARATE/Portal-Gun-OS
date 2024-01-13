@@ -1,4 +1,7 @@
 ## Summary
+
+**Important information about the battery:** After killing two of the batteries I used in the circuit I noticed that the current draw can go up to about 1500mA. The battery I linked was only rated to 1000mA for continuous discharge. I will try to find a fitting replacement, sorry for the mistake. If you have already built in the battery and can't take it out again it should still work I think. However battery lifetime might be less and you shouldn't turn the circuit on for too long. My second battery died on the first full charge after about 5h with the circuit being continually on and was working fine until then.
+
 This repository contains everything you need to build the arduino controlled electronics of my [3d printable Portal Gun](https://www.thingiverse.com/thing:6191828).
 
 In the `main` branch here you will find my own circuit which features a USB-C rechargable LiPo battery and simply two buttons to switch between orange and blue lights. 
@@ -14,7 +17,7 @@ I have linked some sellers as an example so you know what to look for but you ca
 |---|---|---|---|
 | 1 | 201 | [USB-C Breakout Box ](https://www.adafruit.com/product/4090) |  |
 | 1 | 202 | [PowerBoost 500 Charger](https://www.adafruit.com/product/1944) | Look for adafruit distributors on the site if it's out of stock there |
-| 1 | 203 | [3.7V LiPo Battery (1700MAh)](https://www.amazon.de/dp/B09DRQYZXM) |  |
+| 1 | 203 | 3.7V LiPo Battery (1700MAh) | Must be rated for at least 1500mA discharge rate! |
 | 1 | 204 | [Arduino Nano](https://store.arduino.cc/products/arduino-nano) | Other 5V boards work too, you may have to adjust the pins in the code though. |
 | 4 | 205 | [WS2812B RGB LED](https://www.amazon.de/dp/B088K8DVMQ) |  |
 | 1 | 206 | [AZDelivery 5V RGB LED Ring (WS2812B)](https://www.amazon.de/dp/B07SPL2YC1) |  |
