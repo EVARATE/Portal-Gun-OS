@@ -1,7 +1,5 @@
 ## Summary
 
-**Important information about the battery:** After killing two of the batteries I used in the circuit I noticed that the current draw can go up to about 1500mA. The battery I linked was only rated to 1000mA for continuous discharge. I will try to find a fitting replacement, sorry for the mistake. If you have already built in the battery and can't take it out again it should still work I think. However battery lifetime might be less and you shouldn't turn the circuit on for too long. My second battery died on the first full charge after about 5h with the circuit being continually on and was working fine until then.
-
 This repository contains everything you need to build the arduino controlled electronics of my [3d printable Portal Gun](https://www.thingiverse.com/thing:6191828).
 
 In the `main` branch here you will find my own circuit which features a USB-C rechargable LiPo battery and simply two buttons to switch between orange and blue lights. 
@@ -10,6 +8,11 @@ If you want to share an altered design then don't hesitate to send a pull reques
 
 **Disclaimer:** *These instructions include soldering things to a 5V powersupply (e.g. computer, USB charger) and a Lithium Polymer battery. Especially the latter one can be easily damaged and if mistreated start burning or explode. I did all of this to the best of my knowledge but I'm a hobbyist at best. So make sure you double check everything, research this yourself and ask professionals or someone who actually knows what they are doing for help if you are unsure. These batteries aren't plug-and-play. <ins>They will get damaged</ins> if you supply the wrong voltage or current. Do this at your own risk.*
 
+## Upcoming updates and changes
+With the change to the new 6600mAh battery there will be an update to the code regarding the battery charge indicator LED which will require minor circuit changes including a [new DPDT switch](https://amzn.eu/d/fgQK8TB) and an updated ``003_Hatch``. So far, the LED only lights up when the battery is low but won't give you any other information about the charge level. If this is all you want, you can keep using the current circuit. However for the update the arduino needs to read the battery voltage on one pin (A0) but in order to be able to fully turn the circuit on and off, the on/off switch must also break the connection between BAT and A0, otherwise the arduino will draw power via A0 which is not good.
+
+After testing I will upload the changes in a few weeks.
+
 ## Part list
 I have linked some sellers as an example so you know what to look for but you can probably find similar parts at a vendor closer to you.
 
@@ -17,7 +20,7 @@ I have linked some sellers as an example so you know what to look for but you ca
 |---|---|---|---|
 | 1 | 201 | [USB-C Breakout Box ](https://www.adafruit.com/product/4090) |  |
 | 1 | 202 | [PowerBoost 500 Charger](https://www.adafruit.com/product/1944) | Look for adafruit distributors on the site if it's out of stock there |
-| 1 | 203 | 3.7V LiPo Battery (1700MAh) | Must be rated for at least 1500mA discharge rate! |
+| 1 | 203 | [3.7V LiPo Battery](https://www.adafruit.com/product/353) | Must be rated for at least 1500mA discharge rate! |
 | 1 | 204 | [Arduino Nano](https://store.arduino.cc/products/arduino-nano) | Other 5V boards work too, you may have to adjust the pins in the code though. |
 | 4 | 205 | [WS2812B RGB LED](https://www.amazon.de/dp/B088K8DVMQ) |  |
 | 1 | 206 | [AZDelivery 5V RGB LED Ring (WS2812B)](https://www.amazon.de/dp/B07SPL2YC1) |  |
