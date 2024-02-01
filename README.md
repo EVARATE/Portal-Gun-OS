@@ -19,7 +19,7 @@ I have linked some sellers as an example so you know what to look for but you ca
 | Amount | Part Number | Part | Info |
 |---|---|---|---|
 | 1 | 201 | [USB-C Breakout Box ](https://www.adafruit.com/product/4090) |  |
-| 1 | 202 | [PowerBoost 500 Charger](https://www.adafruit.com/product/1944) | Look for adafruit distributors on the site if it's out of stock there |
+| 1 | 202 | [PowerBoost 500 Charger](https://www.adafruit.com/product/1944) | Look for adafruit distributors on the site if it's out of stock there. *Use a PowerBoost 1000 Charger if you want faster charging. Works identical and allowes higher current. I might change to it here in the future too.* |
 | 1 | 203 | [3.7V LiPo Battery](https://www.adafruit.com/product/353) | Must be rated for at least 1500mA discharge rate! |
 | 1 | 204 | [Arduino Nano](https://store.arduino.cc/products/arduino-nano) | Other 5V boards work too, you may have to adjust the pins in the code though. |
 | 4 | 205 | [WS2812B RGB LED](https://www.amazon.de/dp/B088K8DVMQ) |  |
@@ -37,7 +37,7 @@ Here is a schematic for the entire circuit. The colors here are mostly the same 
 
 **Important: You can solder the entire circuit before assembly <ins>except for the LED Ring to the right and the two pushbuttons</ins>**. Only solder those in after screwing the buttons into the *003_Hatch* and laying the wires through the *011_Middle-Channel*.
 
-![Diagram](https://github.com/EVARATE/Portal-Gun-OS/blob/main/images/Circuit%20Diagram%20-%20Last%20Update%2013-09-23.svg)
+![Diagram](https://github.com/EVARATE/Portal-Gun-OS/blob/main/images/Circuit%20Diagram.svg)
 
 Here are some pictures of the real circuit. I first soldered the Arduino and the Powerboost to the PCB Board with four pins in between. Then I connected, ``5V - 5V``,``GND - GND`` and ``LB - A0``. Then ``LED_5V - D10`` via the 220Ohm resistor (see the second image) and ``LED_GND - GND``. Connect the USB-C breakout box wires similarly where the ``D+`` and ``D-`` wires connect to the solder pins of the Male Mini-USB connector (use a multimeter to find out which pins are the right ones) and plug that into the arduino.
 
