@@ -29,7 +29,7 @@ I have linked some sellers as an example so you know what to look for but you ca
 | 1 | 210 | [DPDT ON/ON Toggle Switch](https://amzn.eu/d/6uNPagw) |  |
 | 1 | 211 | [Colored Wires](https://amzn.eu/d/iaCihai) | Must be rated for at least 1A. Anything similar works here obviously. I use the colors in the instructions later. |
 | 1 | 212 | [220 Ohm Resistor](https://amzn.eu/d/9aWYZNG) | Resistance needs to fit the red LED below with ``U_in = 5V`` |
-| 1 | 213 | [5mm Red LED](https://amzn.eu/d/4peTtBC) | For 220Ohm resistor: ``U=1.8V, I=20mA`` |
+| 1 | 213 | [5mm RGB LED](https://amzn.eu/d/5IawEnR) | You can alternatively use a single ([red](https://amzn.eu/d/4peTtBC)) led. |
 | 1 | 214 | [PCB Solder Board](https://amzn.eu/d/1guBOHR) |  |
 
 ## Assembly
