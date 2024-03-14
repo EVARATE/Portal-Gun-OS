@@ -506,8 +506,8 @@
      x1="588.4198"
      y1="167.86069"
      x2="588.4198"
-     y2="156.06754"
-     style="stroke:#404040;stroke-width:0.60000002;stroke-linecap:square;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:0.60000002, 2.4000001;stroke-dashoffset:4.80000019"
+     y2="159.42847"
+     style="stroke:#404040;stroke-width:0.600001;stroke-linecap:square;stroke-miterlimit:4;stroke-dasharray:0.600001, 2.39999;stroke-dashoffset:4.8;stroke-opacity:1"
      id="line124-3-6" />
   <line
      x1="1450"
@@ -837,10 +837,10 @@
      id="ellipse216"
      r="3" />
   <line
-     x1="580.45105"
-     y1="157.97923"
-     x2="597.45105"
-     y2="151.97923"
+     x1="580.99207"
+     y1="160.18649"
+     x2="595.84912"
+     y2="160.16118"
      style="stroke:#000000;stroke-width:2;stroke-linecap:square"
      id="line218" />
   <line
@@ -1736,19 +1736,25 @@
        x="610.80365"
        y="59.180038">G</tspan></text>
   <text
-     x="589.01727"
-     y="131.7173"
+     x="591.8075"
+     y="133.74655"
      style="font-size:11px;font-family:Arial;text-anchor:start"
      dominant-baseline="middle"
      id="text446"><tspan
-       id="tspan8660"
-       x="589.01727"
-       y="131.7173"
-       style="text-align:center;text-anchor:middle">On/Off</tspan><tspan
-       id="tspan8662"
-       x="589.01727"
-       y="145.4673"
-       style="text-align:center;text-anchor:middle">DPDT Switch</tspan></text>
+       id="tspan3539"
+       x="591.8075"
+       y="133.74655"><tspan
+         id="tspan8660"
+         x="591.8075"
+         y="133.74655"
+         style="text-align:center;text-anchor:middle">On/Off</tspan><tspan
+         id="tspan8662"
+         x="591.8075"
+         y="147.49655"
+         style="text-align:center;text-anchor:middle">DPDT Switch</tspan></tspan><tspan
+       id="tspan3541"
+       x="591.8075"
+       y="147.49655" /></text>
   <text
      x="310"
      y="230"
