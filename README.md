@@ -44,15 +44,17 @@ Here are some pictures of the real circuit. I first soldered the Arduino and the
 ### Top view
 
 ![Top view](https://github.com/EVARATE/Portal-Gun-OS/blob/main/images/PGV2_Circuit-1.jpg)
-
+*Note: This image shows an outdated version of the circuit and is not accurate. Refer to the diagram above for the correct wiring!*
 
 ### Bottom view
 
 ![Bottom view](https://github.com/EVARATE/Portal-Gun-OS/blob/main/images/PGV2_Circuit-2.jpg)
+*Note: This image shows an outdated version of the circuit and is not accurate. Refer to the diagram above for the correct wiring!*
 
 Solder the remaining wires according to the schematic (**except for the LED_Ring and the two pushbuttons!**). The picture below shows my circuit again (ignore the missing WS2812B LEDs and the connectors at the pushbutton, those were just for testing). Also solder the wires as perpendicular to the WS2812B LEDs as possible or they won't fit into the printed parts later.
 
 ![Full circuit](https://github.com/EVARATE/Portal-Gun-OS/blob/main/images/PGV2_Circuit-3.jpg)
+*Note: This image shows an outdated version of the circuit and is not accurate. Refer to the diagram above for the correct wiring!*
 
 ![LED Solder](https://github.com/EVARATE/Portal-Gun-OS/blob/main/images/PGV2_Circuit-4.jpg)
 
