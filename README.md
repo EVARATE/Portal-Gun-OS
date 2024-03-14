@@ -39,7 +39,7 @@ Here is a schematic for the entire circuit. The colors here are mostly the same 
 
 ![Diagram](https://github.com/EVARATE/Portal-Gun-OS/blob/main/images/Circuit%20Diagram.svg)
 
-Here are some pictures of the real circuit. I first soldered the Arduino and the Powerboost to the PCB Board with four pins in between. Then I connected, ``5V - 5V``,``GND - GND`` and ``LB - A0``. Then ``LED_5V - D10`` via the 220Ohm resistor (see the second image) and ``LED_GND - GND``. Connect the USB-C breakout box wires similarly where the ``D+`` and ``D-`` wires connect to the solder pins of the Male Mini-USB connector (use a multimeter to find out which pins are the right ones) and plug that into the arduino.
+The following pictures are outdated and will be updated in the future. The diagram always shows the correct wiring. Note: the two connections that run through the DPDT switch must be open/closed inversely to eachother. Meaning that if one is open then the other must be closed.
 
 ### Top view
 
