@@ -8,11 +8,6 @@ If you want to share an altered design then don't hesitate to send a pull reques
 
 **Disclaimer:** *These instructions include soldering things to a 5V powersupply (e.g. computer, USB charger) and a Lithium Polymer battery. Especially the latter one can be easily damaged and if mistreated start burning or explode. I did all of this to the best of my knowledge but I'm a hobbyist at best. So make sure you double check everything, research this yourself and ask professionals or someone who actually knows what they are doing for help if you are unsure. These batteries aren't plug-and-play. <ins>They will get damaged</ins> if you supply the wrong voltage or current. Do this at your own risk.*
 
-## Upcoming updates and changes
-With the change to the new 6600mAh battery there will be an update to the code regarding the battery charge indicator LED which will require minor circuit changes including a [new DPDT switch](https://amzn.eu/d/fgQK8TB) and an updated ``003_Hatch``. So far, the LED only lights up when the battery is low but won't give you any other information about the charge level. If this is all you want, you can keep using the current circuit. However for the update the arduino needs to read the battery voltage on one pin (A0) but in order to be able to fully turn the circuit on and off, the on/off switch must also break the connection between BAT and A0, otherwise the arduino will draw power via A0 which is not good.
-
-After testing I will upload the changes in a few weeks.
-
 ## Part list
 I have linked some sellers as an example so you know what to look for but you can probably find similar parts at a vendor closer to you.
 
@@ -63,7 +58,7 @@ Solder the remaining wires according to the schematic (**except for the LED_Ring
 Before connecting a powersupply check all connections with a multimeter just to be safe. Also check if the wires of your battery have the same polarity as the powerboost. Some manufacturers flip them!!! Cut the battery wires individually and solder the connector on in reverse if this is the case.
 Then plug in the LiPo battery and see if the board powers up. (**The PowerBoost 500 Charger requires the battery to be plugged in even if you connect the USB-C to power.**).
 
-With the toggle switch off there should only be the ``LOW`` LED of the PowerBoost burning. With the toggle switch on there should be the ``PWR`` or ``Chrg`` LED of the PowerBoost and some red LEDs on the arduino burning.
+With the DPDT switch off all other leds should also be off. With the toggle switch on there should be the ``PWR`` or ``Chrg`` LED of the PowerBoost and some red LEDs on the arduino burning.
 
 ### Uploading the code
 If you have never uploaded code to an arduino then the simplest way is probably the [Arduino Web Editor](https://create.arduino.cc/editor). Go to the link, create an account and follow the instructions. There is also a downloadable IDE and tons of guides and tutorials on youtube to get you started.
