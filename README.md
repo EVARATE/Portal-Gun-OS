@@ -23,7 +23,8 @@ I have linked some sellers as an example so you know what to look for but you ca
 | 2 | 209 | [16mm Momentary Push Button](https://amzn.eu/d/92y2J6f) |  |
 | 1 | 210 | [DPDT ON/ON Toggle Switch](https://amzn.eu/d/6uNPagw) |  |
 | 1 | 211 | [Colored Wires](https://amzn.eu/d/iaCihai) | Must be rated for at least 1A. Anything similar works here obviously. I use the colors in the instructions later. |
-| 1 | 212 | [220 Ohm Resistor](https://amzn.eu/d/9aWYZNG) | Resistance needs to fit the red LED below with ``U_in = 5V`` |
+| 1 | 212.1 | [150 Ohm Resistor](https://amzn.eu/d/dEHxbVM) | Resistance needs to fit the red LED below with ``U_in = 5V`` |
+| 1 | 212.2 | [120 Ohm Resistor](https://amzn.eu/d/1QdeTb7) | Resistance needs to fit the green LED below with ``U_in = 5V`` |
 | 1 | 213 | [5mm RGB LED](https://amzn.eu/d/5IawEnR) | You can alternatively use a single ([red](https://amzn.eu/d/4peTtBC)) led. |
 | 1 | 214 | [PCB Solder Board](https://amzn.eu/d/1guBOHR) |  |
 
